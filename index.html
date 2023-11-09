@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=JetBrains+Mono:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="title">Crie e compartilhe seu evento.</h1>
+        <p class="discretion">
+          O primeiro passo, é preencher esse formulário de inscrição.
+        </p>
+      </header>
+      <form id="my-form">
+        <!-- Event Information -->
+        <fieldset>
+          <legend>Informações do Evento</legend>
+        </fieldset>
+
+        <div class="event-form">
+          <label for="card-title"
+            >Título do evento <span>(mínimo 8 caracteres)</span></label
+          >
+          <input type="text" name="card-title" id="card-title" />
+        </div>
+
+        <div class="event-form">
+          <label for="card-title"
+            >Link do evento <span>(comece com https://)</span></label
+          >
+          <input type="text" name="card-link" id="card-link" />
+        </div>
+
+        <div class="event-form">
+          <label for="card-title"
+            >Whatsapp para contato <span>(somente números)</span></label
+          >
+          <input type="number" name="card-whatsapp" id="card-whatsapp" />
+        </div>
+
+        <div class="event-form">
+          <label for="card-title">Informações extras</label>
+          <textarea name="text" id="text" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="event-form">
+          <label for="card-title">Categoria</label>
+          <select name="option" id="option">
+            <option value="">Tipo de evento</option>
+            <option value="party">Festa</option>
+            <option value="car">Carro</option>
+            <option value="birthday">Aniversario</option>
+          </select>
+        </div>
+
+        <!-- Card privacy -->
+        <fieldset class="card-privacy">
+          <legend>Privacidade</legend>
+        </fieldset>
+
+        <div class="event-form">
+          <label for="card-title"
+            >E-mail do administrador
+            <span>(digite um email válido)</span></label
+          >
+          <input type="email" name="card-email" id="card-email" />
+        </div>
+
+        <div class="event-form">
+          <label for="card-title"
+            >Senha de acesso para os participantes
+            <span>(mínimo 8 caracteres)</span></label
+          >
+          <input type="password" name="card-password" id="card-password" />
+        </div>
+
+        <div class="event-checkbox">
+          <input
+            class="checkbox"
+            type="checkbox"
+            name="private-event"
+            id="private-event"
+          />
+          <label for="private-event">Evento privado</label>
+        </div>
+
+        <!-- Card day and hour -->
+        <fieldset class="card-privacy">
+          <legend>Dia e hora</legend>
+        </fieldset>
+
+        <div class="day-and-hour">
+          <div class="date">
+            <label for="date">Data</label>
+            <input type="date" name="date" id="date" placeholder="DD/MM/YYYY" />
+          </div>
+
+          <div class="star">
+            <label for="start">Das</label>
+            <input type="time" name="start" id="start" placeholder="19:00" />
+          </div>
+
+          <div class="end">
+            <label for="end">Até</label>
+            <input type="time" name="end" id="end" placeholder="20:00" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="event-buttom">
+      <button form="my-form">Salvar evento</button>
+    </div>
+  </body>
+</html>
